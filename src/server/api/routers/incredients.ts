@@ -6,7 +6,7 @@ import {
   publicProcedure,
 } from "~/server/api/trpc";
 
-export const coctailRouter = createTRPCRouter({
+export const ingredientsRouter = createTRPCRouter({
   create: protectedProcedure
     .input(z.object({ name: z.string().min(1), ingredients: z.string().min(1), instructions: z.string().min(1) }))
     .mutation(async ({ ctx, input }) => {
