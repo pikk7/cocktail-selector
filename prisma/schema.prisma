@@ -72,3 +72,21 @@ model VerificationToken {
 
     @@unique([identifier, token])
 }
+
+model Cocktail {
+    id           Int          @id @default(autoincrement())
+    name         String
+    description  String
+    ingredients  Ingredient[]
+    instructions String
+    createdAt    DateTime     @default(now())
+    updatedAt    DateTime     @updatedAt
+}
+
+model Ingredient {
+    id         Int      @id @default(autoincrement())
+    name       String
+    quantity   String
+    cocktail   Cocktail @relation(fields: [cocktailId], references: [id])
+    cocktailId Int
+}
