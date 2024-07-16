@@ -1,16 +1,9 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
     provider = "prisma-client-js"
 }
 
 datasource db {
     provider = "sqlite"
-    // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
-    // Further reading:
-    // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
-    // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
     url      = env("DATABASE_URL")
 }
 
@@ -73,20 +66,24 @@ model VerificationToken {
     @@unique([identifier, token])
 }
 
-model Cocktail {
-    id           Int          @id @default(autoincrement())
-    name         String
-    description  String
-    ingredients  Ingredient[]
-    instructions String
-    createdAt    DateTime     @default(now())
-    updatedAt    DateTime     @updatedAt
+model Ingredient {
+    id                 Int                  @id @default(autoincrement())
+    name               String               @unique
+    CocktailIngredient CocktailIngredient[]
 }
 
-model Ingredient {
-    id         Int      @id @default(autoincrement())
-    name       String
-    quantity   String
-    cocktail   Cocktail @relation(fields: [cocktailId], references: [id])
-    cocktailId Int
+model Cocktail {
+    id                 Int                  @id @default(autoincrement())
+    name               String
+    instructions       String
+    CocktailIngredient CocktailIngredient[]
+}
+
+model CocktailIngredient {
+    id           Int        @id @default(autoincrement())
+    quantity     String
+    ingredientId Int
+    cocktailId   Int
+    Ingredient   Ingredient @relation(fields: [ingredientId], references: [id])
+    Cocktail     Cocktail   @relation(fields: [cocktailId], references: [id])
 }
