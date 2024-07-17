@@ -5,7 +5,9 @@ import { useState } from "react";
 import React from "react";
 
 export default function Home() {
+  const [renderState, setRenderState] = useState("home");
   const [ingredients, setIngredients] = useState("");
+  const [cocktails, setCocktails] = useState<any[]>([]);
   const cocktailQueryStrict = api.cocktail.getCocktailsStrictly.useQuery(
     { ingredients: ingredients.split(",").map((ing) => ing.trim()) },
     {
@@ -27,11 +29,45 @@ export default function Home() {
   const handleStrict = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     cocktailQueryStrict.refetch();
+    setRenderState("Strict");
+    setCocktails(cocktailQueryStrict.data || []);
   };
 
   const handlePartly = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     cocktailQueryPartly.refetch();
+    setRenderState("Partly");
+    setCocktails(cocktailQueryPartly.data || []);
+  };
+
+  const renderCocktails = (cocktails: any) => {
+    if (renderState === "home") {
+      return <></>;
+    }
+    return (
+      <>
+        <h2 className="mb-4 text-2xl">{renderState} Matches</h2>
+        {cocktails.length === 0 && <p>No cocktails found</p>}
+        <ul>
+          {cocktails.map((cocktail: any) => (
+            <li
+              key={cocktail.id}
+              className="mb-6 rounded border border-gray-200 p-4"
+            >
+              <h2 className="mb-2 text-2xl text-blue-600">{cocktail.name}</h2>
+              <p className="mb-2">{cocktail.instructions}</p>
+              <ul className="list-disc pl-5">
+                {cocktail.cocktailIngredient.map((ci: any) => (
+                  <li key={ci.id}>
+                    {ci.quantity} {ci.ingredient.name}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
   };
 
   return (
@@ -64,60 +100,7 @@ export default function Home() {
           </button>
         </div>
       </form>
-      <div>
-        {cocktailQueryStrict.data?.length &&
-          cocktailQueryStrict.data.length > 0 && (
-            <>
-              <h2 className="mb-4 text-2xl">Strict Matches</h2>
-              <ul>
-                {cocktailQueryStrict.data.map((cocktail) => (
-                  <li
-                    key={cocktail.id}
-                    className="mb-6 rounded border border-gray-200 p-4"
-                  >
-                    <h2 className="mb-2 text-2xl text-blue-600">
-                      {cocktail.name}
-                    </h2>
-                    <p className="mb-2">{cocktail.instructions}</p>
-                    <ul className="list-disc pl-5">
-                      {cocktail.cocktailIngredient.map((ci) => (
-                        <li key={ci.id}>
-                          {ci.quantity} {ci.ingredient.name}
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        {cocktailQueryPartly.data?.length &&
-          cocktailQueryPartly.data.length > 0 && (
-            <>
-              <h2 className="mb-4 text-2xl">Partial Matches</h2>
-              <ul>
-                {cocktailQueryPartly.data.map((cocktail) => (
-                  <li
-                    key={cocktail.id}
-                    className="mb-6 rounded border border-gray-200 p-4"
-                  >
-                    <h2 className="mb-2 text-2xl text-blue-600">
-                      {cocktail.name}
-                    </h2>
-                    <p className="mb-2">{cocktail.instructions}</p>
-                    <ul className="list-disc pl-5">
-                      {cocktail.cocktailIngredient.map((ci) => (
-                        <li key={ci.id}>
-                          {ci.quantity} {ci.ingredient.name}
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-      </div>
+      <div>{renderCocktails(cocktails || [])}</div>
     </div>
   );
 }

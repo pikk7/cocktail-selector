@@ -42,23 +42,27 @@ export const cocktailRouter = createTRPCRouter({
       }),
     )
     .query(async ({ ctx, input }) => {
-      const cocktails = await ctx.db.cocktail.findMany({
-        include: {
-          cocktailIngredient: {
-            include: {
-              ingredient: true,
+      try {
+        const cocktails = await ctx.db.cocktail.findMany({
+          include: {
+            cocktailIngredient: {
+              include: {
+                ingredient: true,
+              },
             },
           },
-        },
-      });
+        });
 
-      const matchedCocktails = cocktails.filter((cocktail) =>
-        cocktail.cocktailIngredient.every((ci) =>
-          input.ingredients.includes(ci.ingredient.name),
-        ),
-      );
+        const matchedCocktails = cocktails.filter((cocktail) =>
+          cocktail.cocktailIngredient.every((ci) =>
+            input.ingredients.includes(ci.ingredient.name),
+          ),
+        );
 
-      return matchedCocktails;
+        return matchedCocktails;
+      } catch {
+        return [];
+      }
     }),
 
   getCocktailsPartly: publicProcedure
@@ -68,6 +72,7 @@ export const cocktailRouter = createTRPCRouter({
       }),
     )
     .query(async ({ ctx, input }) => {
+      try{
       const cocktails = await ctx.db.cocktail.findMany({
         include: {
           cocktailIngredient: {
@@ -85,5 +90,8 @@ export const cocktailRouter = createTRPCRouter({
       );
 
       return matchedCocktails;
+    } catch {
+      return [];
+    }
     }),
 });
