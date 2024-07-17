@@ -69,14 +69,14 @@ model VerificationToken {
 model Ingredient {
     id                 Int                  @id @default(autoincrement())
     name               String               @unique
-    CocktailIngredient CocktailIngredient[]
+    cocktailIngredient CocktailIngredient[]
 }
 
 model Cocktail {
     id                 Int                  @id @default(autoincrement())
     name               String
     instructions       String
-    CocktailIngredient CocktailIngredient[]
+    cocktailIngredient CocktailIngredient[]
 }
 
 model CocktailIngredient {
@@ -84,6 +84,6 @@ model CocktailIngredient {
     quantity     String
     ingredientId Int
     cocktailId   Int
-    Ingredient   Ingredient @relation(fields: [ingredientId], references: [id])
-    Cocktail     Cocktail   @relation(fields: [cocktailId], references: [id])
+    ingredient   Ingredient @relation(fields: [ingredientId], references: [id])
+    cocktail     Cocktail   @relation(fields: [cocktailId], references: [id])
 }

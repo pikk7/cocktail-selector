@@ -6,9 +6,15 @@ import {
   publicProcedure,
 } from "~/server/api/trpc";
 
-export const coctailRouter = createTRPCRouter({
+export const cocktailRouter = createTRPCRouter({
   create: protectedProcedure
-    .input(z.object({ name: z.string().min(1), ingredients: z.string().min(1), instructions: z.string().min(1) }))
+    .input(
+      z.object({
+        name: z.string().min(1),
+        ingredients: z.string().min(1),
+        instructions: z.string().min(1),
+      }),
+    )
     .mutation(async ({ ctx, input }) => {
       return ctx.db.cocktail.create({
         data: {
@@ -19,43 +25,65 @@ export const coctailRouter = createTRPCRouter({
     }),
 
   getLatest: protectedProcedure.query(({ ctx }) => {
-    return ctx.db.cocktail.findFirst({
-
-    });
+    return ctx.db.cocktail.findFirst({});
   }),
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.db.cocktail.findMany({
       include: {
-        CocktailIngredient: { include: { Ingredient: true } }
-      }
+        cocktailIngredient: { include: { ingredient: true } },
+      },
     });
-
   }),
 
-
-  getCocktail: protectedProcedure
-
-
-    .input(z.object({ name: z.string().min(1), ingredients: z.string().min(1), instructions: z.string().min(1) }))
+  getCocktailsStrictly: publicProcedure
+    .input(
+      z.object({
+        ingredients: z.array(z.string()).min(1),
+      }),
+    )
     .query(async ({ ctx, input }) => {
       const cocktails = await ctx.db.cocktail.findMany({
         include: {
-          CocktailIngredient: {
+          cocktailIngredient: {
             include: {
-              Ingredient: true,
+              ingredient: true,
             },
           },
         },
       });
 
       const matchedCocktails = cocktails.filter((cocktail) =>
-        cocktail.CocktailIngredient.every((ci) =>
-          input.ingredients.includes(ci.Ingredient.name)
-        )
+        cocktail.cocktailIngredient.every((ci) =>
+          input.ingredients.includes(ci.ingredient.name),
+        ),
       );
 
       return matchedCocktails;
     }),
 
-})
+  getCocktailsPartly: publicProcedure
+    .input(
+      z.object({
+        ingredients: z.array(z.string()).min(1),
+      }),
+    )
+    .query(async ({ ctx, input }) => {
+      const cocktails = await ctx.db.cocktail.findMany({
+        include: {
+          cocktailIngredient: {
+            include: {
+              ingredient: true,
+            },
+          },
+        },
+      });
 
+      const matchedCocktails = cocktails.filter((cocktail) =>
+        cocktail.cocktailIngredient.some((ci) =>
+          input.ingredients.includes(ci.ingredient.name),
+        ),
+      );
+
+      return matchedCocktails;
+    }),
+});

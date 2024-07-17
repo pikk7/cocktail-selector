@@ -1,6 +1,6 @@
 import { postRouter } from "~/server/api/routers/post";
 import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
-import { coctailRouter } from "./routers/cocktail";
+import { cocktailRouter } from "./routers/cocktail";
 import { ingredientsRouter } from "./routers/incredients";
 
 /**
@@ -10,7 +10,7 @@ import { ingredientsRouter } from "./routers/incredients";
  */
 export const appRouter = createTRPCRouter({
   post: postRouter,
-  cocktail: coctailRouter,
+  cocktail: cocktailRouter,
   ingredients: ingredientsRouter,
 });
 
