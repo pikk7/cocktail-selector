@@ -24,6 +24,7 @@ if (typeof window !== "undefined" && "serviceWorker" in navigator) {
     );
   });
 }
+
 export default function RootLayout({
   children,
 }: {

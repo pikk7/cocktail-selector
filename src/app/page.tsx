@@ -50,7 +50,7 @@ export default function Home() {
     setFindResults(matchedCocktails);
   };
 
-  const renderCocktails = (cocktails: any) => {
+  const renderCocktails = (cocktails: any[]) => {
     if (isLoading) {
       return <p>Loading...</p>;
     }
