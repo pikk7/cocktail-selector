@@ -244,11 +244,6 @@ async function main() {
         name: "Gimlet",
         instructions: "Shake gin and lime juice with ice, strain into a glass.",
       },
-      {
-        name: "Mai Tai",
-        instructions:
-          "Shake all ingredients with ice and strain into a glass, garnish with mint.",
-      },
     ],
   });
 
