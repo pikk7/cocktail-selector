@@ -9,7 +9,21 @@ export const metadata = {
   description: "Help select cocktails based on ingredients",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
-
+if (typeof window !== "undefined" && "serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").then(
+      (registration) => {
+        console.log(
+          "ServiceWorker registration successful with scope: ",
+          registration.scope,
+        );
+      },
+      (err) => {
+        console.log("ServiceWorker registration failed: ", err);
+      },
+    );
+  });
+}
 export default function RootLayout({
   children,
 }: {
@@ -17,6 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
+      <link rel="manifest" href="/manifest.json"></link>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
