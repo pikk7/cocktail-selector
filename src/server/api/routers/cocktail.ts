@@ -24,9 +24,7 @@ export const cocktailRouter = createTRPCRouter({
       });
     }),
 
-  getLatest: protectedProcedure.query(({ ctx }) => {
-    return ctx.db.cocktail.findFirst({});
-  }),
+
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.db.cocktail.findMany({
       include: {
