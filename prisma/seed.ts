@@ -33,7 +33,6 @@ async function main() {
       { name: "cream" },
       { name: "kahlua" },
       { name: "baileys" },
-      { name: "vodka" },
       { name: "tomato juice" },
       { name: "worcestershire sauce" },
       { name: "tabasco" },
