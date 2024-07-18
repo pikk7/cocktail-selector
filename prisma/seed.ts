@@ -44,6 +44,73 @@ async function main() {
     "champagne",
     "orange juice",
     "syrup",
+    "kahlua",
+    "baileys",
+    "grenadine",
+    "maraschino liqueur",
+    "campari",
+    "prosecco",
+    "blue curacao",
+    "amaretto",
+    "bourbon",
+    "angostura bitters",
+    "soda",
+    "egg white",
+    "sugar syrup",
+    "ginger beer",
+    "dark rum",
+    "fresh mint",
+    "maraschino cherry",
+    "light rum",
+    "orange bitters",
+    "clove",
+    "allspice",
+    "star anise",
+    "cinnamon",
+    "nutmeg",
+    "maple syrup",
+    "grapefruit juice",
+    "agave syrup",
+    "cucumber",
+    "sage",
+    "thyme",
+    "rosemary",
+    "elderflower liqueur",
+    "cachaca",
+    "passion fruit",
+    "caramel syrup",
+    "apple cider",
+    "apple juice",
+    "cider",
+    "sparkling water",
+    "club soda",
+    "cinnamon stick",
+    "coriander",
+    "cardamom",
+    "clove syrup",
+    "allspice dram",
+    "nutmeg syrup",
+    "simple syrup",
+    "honey syrup",
+    "cherry brandy",
+    "peach schnapps",
+    "grenadine syrup",
+    "coconut milk",
+    "hibiscus syrup",
+    "vanilla syrup",
+    "ginger syrup",
+    "pomegranate juice",
+    "raspberry syrup",
+    "orange flower water",
+    "blueberry syrup",
+    "strawberry syrup",
+    "cassis liqueur",
+    "crème de violette",
+    "apricot brandy",
+    "grape juice",
+    "blackberry syrup",
+    "orange juice",
+    "pear brandy",
   ];
 
   // Remove duplicates from the ingredientNames array
@@ -115,9 +182,190 @@ async function main() {
           "Shake all ingredients with ice and strain into a chilled glass.",
       },
       {
-        name: "Mai Tai",
+        name: "Old Fashioned",
+        instructions: "Stir all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "Martini",
         instructions:
-          "Shake all ingredients with ice and strain into a chilled glass.",
+          "Stir gin and vermouth with ice and strain into a chilled glass, garnish with an olive.",
+      },
+      {
+        name: "Caipirinha",
+        instructions: "Muddle lime and sugar, add cachaca and ice, stir well.",
+      },
+      {
+        name: "Negroni",
+        instructions: "Stir all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "Mai Tai",
+        instructions: "Shake all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "French 75",
+        instructions:
+          "Shake gin, lemon juice, and syrup with ice, top with champagne.",
+      },
+      {
+        name: "Paloma",
+        instructions: "Mix tequila, lime juice, and grapefruit soda over ice.",
+      },
+      {
+        name: "Mint Julep",
+        instructions: "Muddle mint and syrup, add bourbon and ice, stir well.",
+      },
+      {
+        name: "Aperol Spritz",
+        instructions:
+          "Mix Aperol, prosecco, and soda water over ice, garnish with orange slice.",
+      },
+      {
+        name: "Tom Collins",
+        instructions:
+          "Shake gin, lemon juice, and syrup with ice, top with soda water.",
+      },
+      {
+        name: "Pisco Sour",
+        instructions:
+          "Shake pisco, lemon juice, syrup, and egg white with ice, strain into a glass.",
+      },
+      {
+        name: "Moscow Mule",
+        instructions:
+          "Mix vodka, lime juice, and ginger beer over ice, serve in a copper mug.",
+      },
+      {
+        name: "Long Island Iced Tea",
+        instructions: "Shake all ingredients with ice, top with cola.",
+      },
+      {
+        name: "Amaretto Sour",
+        instructions:
+          "Shake amaretto, lemon juice, and syrup with ice, strain into a glass.",
+      },
+      {
+        name: "Hurricane",
+        instructions: "Shake all ingredients with ice, serve over ice.",
+      },
+      {
+        name: "Dark and Stormy",
+        instructions:
+          "Mix dark rum and ginger beer over ice, garnish with lime.",
+      },
+      {
+        name: "Sazerac",
+        instructions: "Stir all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "Sidecar",
+        instructions: "Shake all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "Corpse Reviver",
+        instructions: "Shake all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "Boulevardier",
+        instructions: "Stir all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "Mai Tai",
+        instructions: "Shake all ingredients with ice and strain into a glass.",
+      },
+      {
+        name: "Gin Fizz",
+        instructions:
+          "Shake gin, lemon juice, syrup, and egg white with ice, top with soda.",
+      },
+      {
+        name: "Gimlet",
+        instructions: "Shake gin and lime juice with ice, strain into a glass.",
+      },
+      {
+        name: "Vesper Martini",
+        instructions:
+          "Shake gin, vodka, and Lillet Blanc with ice, strain into a glass.",
+      },
+      {
+        name: "Espresso Martini",
+        instructions:
+          "Shake vodka, coffee liqueur, and espresso with ice, strain into a glass.",
+      },
+      {
+        name: "Aviation",
+        instructions:
+          "Shake gin, maraschino liqueur, and lemon juice with ice, strain into a glass.",
+      },
+      {
+        name: "Ramos Gin Fizz",
+        instructions:
+          "Shake gin, lemon juice, syrup, egg white, and cream with ice, top with soda.",
+      },
+      {
+        name: "Southside",
+        instructions:
+          "Shake gin, lime juice, mint, and syrup with ice, strain into a glass.",
+      },
+      {
+        name: "Clover Club",
+        instructions:
+          "Shake gin, raspberry syrup, lemon juice, and egg white with ice, strain into a glass.",
+      },
+      {
+        name: "Brandy Alexander",
+        instructions:
+          "Shake brandy, crème de cacao, and cream with ice, strain into a glass.",
+      },
+      {
+        name: "Rusty Nail",
+        instructions:
+          "Mix scotch and Drambuie over ice, garnish with lemon twist.",
+      },
+      {
+        name: "Penicillin",
+        instructions:
+          "Shake scotch, lemon juice, honey syrup, and ginger syrup with ice, strain into a glass.",
+      },
+      {
+        name: "Bee's Knees",
+        instructions:
+          "Shake gin, lemon juice, and honey syrup with ice, strain into a glass.",
+      },
+      {
+        name: "Hemingway Daiquiri",
+        instructions:
+          "Shake rum, maraschino liqueur, grapefruit juice, and lime juice with ice, strain into a glass.",
+      },
+      {
+        name: "Painkiller",
+        instructions:
+          "Shake rum, pineapple juice, orange juice, and coconut cream with ice, strain into a glass.",
+      },
+      {
+        name: "Fog Cutter",
+        instructions:
+          "Shake rum, gin, brandy, orgeat, and lemon juice with ice, strain into a glass.",
+      },
+      {
+        name: "Singapore Sling",
+        instructions:
+          "Shake gin, cherry brandy, Cointreau, Benedictine, pineapple juice, lime juice, grenadine, and bitters with ice, strain into a glass.",
+      },
+      {
+        name: "Planter's Punch",
+        instructions:
+          "Shake rum, lime juice, lemon juice, grenadine, and syrup with ice, strain into a glass.",
+      },
+      {
+        name: "Zombie",
+        instructions:
+          "Shake rum, lime juice, pineapple juice, passion fruit syrup, and grenadine with ice, strain into a glass.",
+      },
+      {
+        name: "Scorpion",
+        instructions:
+          "Shake rum, brandy, orange juice, lemon juice, and orgeat with ice, strain into a glass.",
       },
     ],
   });
@@ -275,23 +523,6 @@ async function main() {
         cocktailId: cocktailMap.get("Manhattan") ?? 0,
       },
 
-      // Piña Colada
-      {
-        quantity: "50ml",
-        ingredientId: ingredientMap.get("rum") ?? 0,
-        cocktailId: cocktailMap.get("Piña Colada") ?? 0,
-      },
-      {
-        quantity: "100ml",
-        ingredientId: ingredientMap.get("pineapple juice") ?? 0,
-        cocktailId: cocktailMap.get("Piña Colada") ?? 0,
-      },
-      {
-        quantity: "50ml",
-        ingredientId: ingredientMap.get("coconut cream") ?? 0,
-        cocktailId: cocktailMap.get("Piña Colada") ?? 0,
-      },
-
       // White Russian
       {
         quantity: "50ml",
@@ -304,7 +535,7 @@ async function main() {
         cocktailId: cocktailMap.get("White Russian") ?? 0,
       },
       {
-        quantity: "top up",
+        quantity: "25ml",
         ingredientId: ingredientMap.get("cream") ?? 0,
         cocktailId: cocktailMap.get("White Russian") ?? 0,
       },
@@ -331,7 +562,7 @@ async function main() {
         cocktailId: cocktailMap.get("Bloody Mary") ?? 0,
       },
       {
-        quantity: "pinch",
+        quantity: "1 stick",
         ingredientId: ingredientMap.get("celery") ?? 0,
         cocktailId: cocktailMap.get("Bloody Mary") ?? 0,
       },
@@ -353,21 +584,9 @@ async function main() {
         cocktailId: cocktailMap.get("Bellini") ?? 0,
       },
       {
-        quantity: "100ml",
+        quantity: "top up",
         ingredientId: ingredientMap.get("champagne") ?? 0,
         cocktailId: cocktailMap.get("Bellini") ?? 0,
-      },
-
-      // Mimosa
-      {
-        quantity: "50ml",
-        ingredientId: ingredientMap.get("orange juice") ?? 0,
-        cocktailId: cocktailMap.get("Mimosa") ?? 0,
-      },
-      {
-        quantity: "100ml",
-        ingredientId: ingredientMap.get("champagne") ?? 0,
-        cocktailId: cocktailMap.get("Mimosa") ?? 0,
       },
 
       // Daiquiri
@@ -383,8 +602,205 @@ async function main() {
       },
       {
         quantity: "15ml",
-        ingredientId: ingredientMap.get("simple syrup") ?? 0,
+        ingredientId: ingredientMap.get("sugar") ?? 0,
         cocktailId: cocktailMap.get("Daiquiri") ?? 0,
+      },
+
+      // Old Fashioned
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("whiskey") ?? 0,
+        cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
+      },
+      {
+        quantity: "2 dashes",
+        ingredientId: ingredientMap.get("bitters") ?? 0,
+        cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
+      },
+      {
+        quantity: "1 twist",
+        ingredientId: ingredientMap.get("orange twist") ?? 0,
+        cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
+      },
+
+      // Martini
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("gin") ?? 0,
+        cocktailId: cocktailMap.get("Martini") ?? 0,
+      },
+      {
+        quantity: "10ml",
+        ingredientId: ingredientMap.get("vermouth") ?? 0,
+        cocktailId: cocktailMap.get("Martini") ?? 0,
+      },
+      {
+        quantity: "1",
+        ingredientId: ingredientMap.get("olive") ?? 0,
+        cocktailId: cocktailMap.get("Martini") ?? 0,
+      },
+
+      // Caipirinha
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("cachaca") ?? 0,
+        cocktailId: cocktailMap.get("Caipirinha") ?? 0,
+      },
+      {
+        quantity: "1",
+        ingredientId: ingredientMap.get("lime") ?? 0,
+        cocktailId: cocktailMap.get("Caipirinha") ?? 0,
+      },
+      {
+        quantity: "2 tsp",
+        ingredientId: ingredientMap.get("sugar") ?? 0,
+        cocktailId: cocktailMap.get("Caipirinha") ?? 0,
+      },
+
+      // Negroni
+      {
+        quantity: "30ml",
+        ingredientId: ingredientMap.get("gin") ?? 0,
+        cocktailId: cocktailMap.get("Negroni") ?? 0,
+      },
+      {
+        quantity: "30ml",
+        ingredientId: ingredientMap.get("vermouth") ?? 0,
+        cocktailId: cocktailMap.get("Negroni") ?? 0,
+      },
+      {
+        quantity: "30ml",
+        ingredientId: ingredientMap.get("campari") ?? 0,
+        cocktailId: cocktailMap.get("Negroni") ?? 0,
+      },
+
+      // French 75
+      {
+        quantity: "30ml",
+        ingredientId: ingredientMap.get("gin") ?? 0,
+        cocktailId: cocktailMap.get("French 75") ?? 0,
+      },
+      {
+        quantity: "15ml",
+        ingredientId: ingredientMap.get("lemon") ?? 0,
+        cocktailId: cocktailMap.get("French 75") ?? 0,
+      },
+      {
+        quantity: "15ml",
+        ingredientId: ingredientMap.get("syrup") ?? 0,
+        cocktailId: cocktailMap.get("French 75") ?? 0,
+      },
+      {
+        quantity: "top up",
+        ingredientId: ingredientMap.get("champagne") ?? 0,
+        cocktailId: cocktailMap.get("French 75") ?? 0,
+      },
+
+      // Paloma
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("tequila") ?? 0,
+        cocktailId: cocktailMap.get("Paloma") ?? 0,
+      },
+      {
+        quantity: "25ml",
+        ingredientId: ingredientMap.get("lime") ?? 0,
+        cocktailId: cocktailMap.get("Paloma") ?? 0,
+      },
+      {
+        quantity: "top up",
+        ingredientId: ingredientMap.get("grapefruit juice") ?? 0,
+        cocktailId: cocktailMap.get("Paloma") ?? 0,
+      },
+
+      // Mint Julep
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("bourbon") ?? 0,
+        cocktailId: cocktailMap.get("Mint Julep") ?? 0,
+      },
+      {
+        quantity: "10 leaves",
+        ingredientId: ingredientMap.get("mint") ?? 0,
+        cocktailId: cocktailMap.get("Mint Julep") ?? 0,
+      },
+      {
+        quantity: "2 tsp",
+        ingredientId: ingredientMap.get("sugar") ?? 0,
+        cocktailId: cocktailMap.get("Mint Julep") ?? 0,
+      },
+
+      // Aperol Spritz
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("aperol") ?? 0,
+        cocktailId: cocktailMap.get("Aperol Spritz") ?? 0,
+      },
+      {
+        quantity: "75ml",
+        ingredientId: ingredientMap.get("prosecco") ?? 0,
+        cocktailId: cocktailMap.get("Aperol Spritz") ?? 0,
+      },
+      {
+        quantity: "top up",
+        ingredientId: ingredientMap.get("soda water") ?? 0,
+        cocktailId: cocktailMap.get("Aperol Spritz") ?? 0,
+      },
+      {
+        quantity: "1 slice",
+        ingredientId: ingredientMap.get("orange") ?? 0,
+        cocktailId: cocktailMap.get("Aperol Spritz") ?? 0,
+      },
+
+      // Tom Collins
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("gin") ?? 0,
+        cocktailId: cocktailMap.get("Tom Collins") ?? 0,
+      },
+      {
+        quantity: "25ml",
+        ingredientId: ingredientMap.get("lemon") ?? 0,
+        cocktailId: cocktailMap.get("Tom Collins") ?? 0,
+      },
+      {
+        quantity: "15ml",
+        ingredientId: ingredientMap.get("syrup") ?? 0,
+        cocktailId: cocktailMap.get("Tom Collins") ?? 0,
+      },
+      {
+        quantity: "top up",
+        ingredientId: ingredientMap.get("soda water") ?? 0,
+        cocktailId: cocktailMap.get("Tom Collins") ?? 0,
+      },
+
+      // Piña Colada
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("rum") ?? 0,
+        cocktailId: cocktailMap.get("Piña Colada") ?? 0,
+      },
+      {
+        quantity: "100ml",
+        ingredientId: ingredientMap.get("pineapple juice") ?? 0,
+        cocktailId: cocktailMap.get("Piña Colada") ?? 0,
+      },
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("coconut cream") ?? 0,
+        cocktailId: cocktailMap.get("Piña Colada") ?? 0,
+      },
+
+      // Mimosa
+      {
+        quantity: "50ml",
+        ingredientId: ingredientMap.get("orange juice") ?? 0,
+        cocktailId: cocktailMap.get("Mimosa") ?? 0,
+      },
+      {
+        quantity: "100ml",
+        ingredientId: ingredientMap.get("champagne") ?? 0,
+        cocktailId: cocktailMap.get("Mimosa") ?? 0,
       },
 
       // Mai Tai
