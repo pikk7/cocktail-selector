@@ -113,6 +113,19 @@ async function main() {
     "aperol",
     "orange juice",
     "brandy",
+    "orgeat",
+    "passion fruit syrup",
+    "Benedictine",
+    "Cointreau",
+    "scotch",
+    "Drambuie",
+    "crème de cacao",
+    "Lillet Blanc",
+    "passion fruit juice",
+    "absinthe",
+    "rye whiskey",
+    "espresso",
+    "Campari",
   ];
 
   // Remove duplicates from the ingredientNames array
@@ -856,6 +869,681 @@ async function main() {
       quantity: "top up",
       ingredientId: ingredientMap.get("champagne") ?? 0,
       cocktailId: cocktailMap.get("Mimosa") ?? 0,
+    },
+
+    //////////////
+    // Long Island Iced Tea
+
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("vodka") ?? 0,
+      cocktailId: cocktailMap.get("Long Island Iced Tea") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Long Island Iced Tea") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Long Island Iced Tea") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("tequila") ?? 0,
+      cocktailId: cocktailMap.get("Long Island Iced Tea") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("triple sec") ?? 0,
+      cocktailId: cocktailMap.get("Long Island Iced Tea") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Long Island Iced Tea") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("cola") ?? 0,
+      cocktailId: cocktailMap.get("Long Island Iced Tea") ?? 0,
+    },
+
+    // Amaretto Sour
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("amaretto") ?? 0,
+      cocktailId: cocktailMap.get("Amaretto Sour") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Amaretto Sour") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Amaretto Sour") ?? 0,
+    },
+
+    // Hurricane
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("dark rum") ?? 0,
+      cocktailId: cocktailMap.get("Hurricane") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("passion fruit juice") ?? 0,
+      cocktailId: cocktailMap.get("Hurricane") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("orange juice") ?? 0,
+      cocktailId: cocktailMap.get("Hurricane") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Hurricane") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Hurricane") ?? 0,
+    },
+    {
+      quantity: "1",
+      ingredientId: ingredientMap.get("grenadine") ?? 0,
+      cocktailId: cocktailMap.get("Hurricane") ?? 0,
+    },
+
+    // Dark and Stormy
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("dark rum") ?? 0,
+      cocktailId: cocktailMap.get("Dark and Stormy") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("ginger beer") ?? 0,
+      cocktailId: cocktailMap.get("Dark and Stormy") ?? 0,
+    },
+    {
+      quantity: "1 slice",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Dark and Stormy") ?? 0,
+    },
+
+    // Sazerac
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("rye whiskey") ?? 0,
+      cocktailId: cocktailMap.get("Sazerac") ?? 0,
+    },
+    {
+      quantity: "10ml",
+      ingredientId: ingredientMap.get("absinthe") ?? 0,
+      cocktailId: cocktailMap.get("Sazerac") ?? 0,
+    },
+    {
+      quantity: "1 sugar cube",
+      ingredientId: ingredientMap.get("sugar") ?? 0,
+      cocktailId: cocktailMap.get("Sazerac") ?? 0,
+    },
+    {
+      quantity: "2 dashes",
+      ingredientId: ingredientMap.get("bitters") ?? 0,
+      cocktailId: cocktailMap.get("Sazerac") ?? 0,
+    },
+
+    // Sidecar
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("brandy") ?? 0,
+      cocktailId: cocktailMap.get("Sidecar") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("triple sec") ?? 0,
+      cocktailId: cocktailMap.get("Sidecar") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Sidecar") ?? 0,
+    },
+
+    // Corpse Reviver
+
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Corpse Reviver") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("Cointreau") ?? 0,
+      cocktailId: cocktailMap.get("Corpse Reviver") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("Lillet Blanc") ?? 0,
+      cocktailId: cocktailMap.get("Corpse Reviver") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Corpse Reviver") ?? 0,
+    },
+    {
+      quantity: "dash",
+      ingredientId: ingredientMap.get("absinthe") ?? 0,
+      cocktailId: cocktailMap.get("Corpse Reviver") ?? 0,
+    },
+
+    // Boulevardier
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("bourbon") ?? 0,
+      cocktailId: cocktailMap.get("Boulevardier") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("vermouth") ?? 0,
+      cocktailId: cocktailMap.get("Boulevardier") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("Campari") ?? 0,
+      cocktailId: cocktailMap.get("Boulevardier") ?? 0,
+    },
+
+    // Mai Tai
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("triple sec") ?? 0,
+      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
+    },
+
+    // Gin Fizz
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "1",
+      ingredientId: ingredientMap.get("egg white") ?? 0,
+      cocktailId: cocktailMap.get("Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("soda water") ?? 0,
+      cocktailId: cocktailMap.get("Gin Fizz") ?? 0,
+    },
+
+    // Gimlet
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Gimlet") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Gimlet") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Gimlet") ?? 0,
+    },
+
+    // Vesper Martini
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Vesper Martini") ?? 0,
+    },
+    {
+      quantity: "10ml",
+      ingredientId: ingredientMap.get("vodka") ?? 0,
+      cocktailId: cocktailMap.get("Vesper Martini") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("Lillet Blanc") ?? 0,
+      cocktailId: cocktailMap.get("Vesper Martini") ?? 0,
+    },
+
+    // Espresso Martini
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("vodka") ?? 0,
+      cocktailId: cocktailMap.get("Espresso Martini") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("coffee liqueur") ?? 0,
+      cocktailId: cocktailMap.get("Espresso Martini") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("espresso") ?? 0,
+      cocktailId: cocktailMap.get("Espresso Martini") ?? 0,
+    },
+
+    // Aviation
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Aviation") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("maraschino liqueur") ?? 0,
+      cocktailId: cocktailMap.get("Aviation") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Aviation") ?? 0,
+    },
+
+    // Ramos Gin Fizz
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Ramos Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Ramos Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Ramos Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "1",
+      ingredientId: ingredientMap.get("egg white") ?? 0,
+      cocktailId: cocktailMap.get("Ramos Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("soda water") ?? 0,
+      cocktailId: cocktailMap.get("Ramos Gin Fizz") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("cream") ?? 0,
+      cocktailId: cocktailMap.get("Ramos Gin Fizz") ?? 0,
+    },
+
+    // Southside
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Southside") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Southside") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Southside") ?? 0,
+    },
+    {
+      quantity: "6",
+      ingredientId: ingredientMap.get("mint") ?? 0,
+      cocktailId: cocktailMap.get("Southside") ?? 0,
+    },
+
+    // Clover Club
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Clover Club") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("raspberry syrup") ?? 0,
+      cocktailId: cocktailMap.get("Clover Club") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Clover Club") ?? 0,
+    },
+    {
+      quantity: "1",
+      ingredientId: ingredientMap.get("egg white") ?? 0,
+      cocktailId: cocktailMap.get("Clover Club") ?? 0,
+    },
+
+    // Brandy Alexander
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("brandy") ?? 0,
+      cocktailId: cocktailMap.get("Brandy Alexander") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("crème de cacao") ?? 0,
+      cocktailId: cocktailMap.get("Brandy Alexander") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("cream") ?? 0,
+      cocktailId: cocktailMap.get("Brandy Alexander") ?? 0,
+    },
+
+    // Rusty Nail
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("scotch") ?? 0,
+      cocktailId: cocktailMap.get("Rusty Nail") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("Drambuie") ?? 0,
+      cocktailId: cocktailMap.get("Rusty Nail") ?? 0,
+    },
+    {
+      quantity: "1 twist",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Rusty Nail") ?? 0,
+    },
+
+    // Penicillin
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("scotch") ?? 0,
+      cocktailId: cocktailMap.get("Penicillin") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Penicillin") ?? 0,
+    },
+    {
+      quantity: "20ml",
+      ingredientId: ingredientMap.get("honey syrup") ?? 0,
+      cocktailId: cocktailMap.get("Penicillin") ?? 0,
+    },
+    {
+      quantity: "10ml",
+      ingredientId: ingredientMap.get("ginger syrup") ?? 0,
+      cocktailId: cocktailMap.get("Penicillin") ?? 0,
+    },
+
+    // Bee's Knees
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Bee's Knees") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Bee's Knees") ?? 0,
+    },
+    {
+      quantity: "20ml",
+      ingredientId: ingredientMap.get("honey syrup") ?? 0,
+      cocktailId: cocktailMap.get("Bee's Knees") ?? 0,
+    },
+
+    // Hemingway Daiquiri
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Hemingway Daiquiri") ?? 0,
+    },
+    {
+      quantity: "10ml",
+      ingredientId: ingredientMap.get("maraschino liqueur") ?? 0,
+      cocktailId: cocktailMap.get("Hemingway Daiquiri") ?? 0,
+    },
+    {
+      quantity: "20ml",
+      ingredientId: ingredientMap.get("grapefruit juice") ?? 0,
+      cocktailId: cocktailMap.get("Hemingway Daiquiri") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Hemingway Daiquiri") ?? 0,
+    },
+
+    // Painkiller
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Painkiller") ?? 0,
+    },
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("pineapple juice") ?? 0,
+      cocktailId: cocktailMap.get("Painkiller") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("orange juice") ?? 0,
+      cocktailId: cocktailMap.get("Painkiller") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("coconut cream") ?? 0,
+      cocktailId: cocktailMap.get("Painkiller") ?? 0,
+    },
+
+    // Fog Cutter
+
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Fog Cutter") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Fog Cutter") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("brandy") ?? 0,
+      cocktailId: cocktailMap.get("Fog Cutter") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("orgeat") ?? 0,
+      cocktailId: cocktailMap.get("Fog Cutter") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Fog Cutter") ?? 0,
+    },
+
+    // Singapore Sling
+
+    {
+      quantity: "30ml",
+      ingredientId: ingredientMap.get("gin") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("cherry brandy") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("Cointreau") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("Benedictine") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("pineapple juice") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+    {
+      quantity: "1 dash",
+      ingredientId: ingredientMap.get("grenadine") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+    {
+      quantity: "1 dash",
+      ingredientId: ingredientMap.get("bitters") ?? 0,
+      cocktailId: cocktailMap.get("Singapore Sling") ?? 0,
+    },
+
+    // Planter's Punch
+
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Planter's Punch") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Planter's Punch") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Planter's Punch") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("grenadine") ?? 0,
+      cocktailId: cocktailMap.get("Planter's Punch") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("syrup") ?? 0,
+      cocktailId: cocktailMap.get("Planter's Punch") ?? 0,
+    },
+
+    // Zombie
+
+    {
+      quantity: "30ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Zombie") ?? 0,
+    },
+    {
+      quantity: "20ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Zombie") ?? 0,
+    },
+    {
+      quantity: "20ml",
+      ingredientId: ingredientMap.get("pineapple juice") ?? 0,
+      cocktailId: cocktailMap.get("Zombie") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("passion fruit syrup") ?? 0,
+      cocktailId: cocktailMap.get("Zombie") ?? 0,
+    },
+    {
+      quantity: "10ml",
+      ingredientId: ingredientMap.get("grenadine") ?? 0,
+      cocktailId: cocktailMap.get("Zombie") ?? 0,
+    },
+
+    // Scorpion
+
+    {
+      quantity: "40ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Scorpion") ?? 0,
+    },
+    {
+      quantity: "20ml",
+      ingredientId: ingredientMap.get("brandy") ?? 0,
+      cocktailId: cocktailMap.get("Scorpion") ?? 0,
+    },
+    {
+      quantity: "30ml",
+      ingredientId: ingredientMap.get("orange juice") ?? 0,
+      cocktailId: cocktailMap.get("Scorpion") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Scorpion") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("orgeat") ?? 0,
+      cocktailId: cocktailMap.get("Scorpion") ?? 0,
     },
   ];
 
