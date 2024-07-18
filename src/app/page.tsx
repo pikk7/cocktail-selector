@@ -7,20 +7,13 @@ import React from "react";
 export default function Home() {
   const [renderState, setRenderState] = useState("home");
   const [ingredients, setIngredients] = useState("");
-  const [cocktails, setCocktails] = useState<any[]>([]);
-  const cocktailQueryStrict = api.cocktail.getCocktailsStrictly.useQuery(
-    { ingredients: ingredients.split(",").map((ing) => ing.trim()) },
-    {
-      enabled: false,
-    },
-  );
+  const [findResults, setFindResults] = useState<any[]>([]);
 
-  const cocktailQueryPartly = api.cocktail.getCocktailsPartly.useQuery(
-    { ingredients: ingredients.split(",").map((ing) => ing.trim()) },
-    {
-      enabled: false,
-    },
-  );
+  const {
+    data: cocktails,
+    isError,
+    isLoading,
+  } = api.cocktail.getAll.useQuery();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIngredients(e.target.value);
@@ -28,19 +21,42 @@ export default function Home() {
 
   const handleStrict = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    cocktailQueryStrict.refetch();
     setRenderState("Strict");
-    setCocktails(cocktailQueryStrict.data || []);
+    const ingredientsList = ingredients
+      .split(",")
+      .map((ingredient) => ingredient.trim());
+    const matchedCocktails = (cocktails ?? []).filter((cocktail) =>
+      cocktail.cocktailIngredient.every((ci) =>
+        ingredientsList.includes(ci.ingredient.name),
+      ),
+    );
+
+    setFindResults(matchedCocktails);
   };
 
   const handlePartly = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    cocktailQueryPartly.refetch();
     setRenderState("Partly");
-    setCocktails(cocktailQueryPartly.data || []);
+    const ingredientsList = ingredients
+      .split(",")
+      .map((ingredient) => ingredient.trim());
+
+    const matchedCocktails = (cocktails ?? []).filter((cocktail) =>
+      cocktail.cocktailIngredient.some((ci) =>
+        ingredientsList.includes(ci.ingredient.name),
+      ),
+    );
+
+    setFindResults(matchedCocktails);
   };
 
   const renderCocktails = (cocktails: any) => {
+    if (isLoading) {
+      return <p>Loading...</p>;
+    }
+    if (isError) {
+      return <p>Error fetching cocktails</p>;
+    }
     if (renderState === "home") {
       return <></>;
     }
@@ -100,7 +116,7 @@ export default function Home() {
           </button>
         </div>
       </form>
-      <div>{renderCocktails(cocktails || [])}</div>
+      <div>{renderCocktails(findResults || [])}</div>
     </div>
   );
 }
