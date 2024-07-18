@@ -1066,29 +1066,6 @@ async function main() {
       cocktailId: cocktailMap.get("Boulevardier") ?? 0,
     },
 
-    // Mai Tai
-
-    {
-      quantity: "50ml",
-      ingredientId: ingredientMap.get("rum") ?? 0,
-      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
-    },
-    {
-      quantity: "25ml",
-      ingredientId: ingredientMap.get("triple sec") ?? 0,
-      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
-    },
-    {
-      quantity: "25ml",
-      ingredientId: ingredientMap.get("lime") ?? 0,
-      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
-    },
-    {
-      quantity: "15ml",
-      ingredientId: ingredientMap.get("syrup") ?? 0,
-      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
-    },
-
     // Gin Fizz
 
     {
