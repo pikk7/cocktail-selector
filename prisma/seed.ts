@@ -112,6 +112,7 @@ async function main() {
     "olive",
     "aperol",
     "orange juice",
+    "brandy",
   ];
 
   // Remove duplicates from the ingredientNames array
@@ -493,6 +494,11 @@ async function main() {
       ingredientId: ingredientMap.get("simple syrup") ?? 0,
       cocktailId: cocktailMap.get("Whiskey Sour") ?? 0,
     },
+    {
+      quantity: "1",
+      ingredientId: ingredientMap.get("egg white") ?? 0,
+      cocktailId: cocktailMap.get("Whiskey Sour") ?? 0,
+    },
 
     // Manhattan
     {
@@ -514,6 +520,23 @@ async function main() {
       quantity: "1 twist",
       ingredientId: ingredientMap.get("orange twist") ?? 0,
       cocktailId: cocktailMap.get("Manhattan") ?? 0,
+    },
+
+    // Piña Colada
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("rum") ?? 0,
+      cocktailId: cocktailMap.get("Piña Colada") ?? 0,
+    },
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("pineapple juice") ?? 0,
+      cocktailId: cocktailMap.get("Piña Colada") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("coconut cream") ?? 0,
+      cocktailId: cocktailMap.get("Piña Colada") ?? 0,
     },
 
     // White Russian
@@ -568,52 +591,6 @@ async function main() {
       quantity: "pinch",
       ingredientId: ingredientMap.get("celery salt") ?? 0,
       cocktailId: cocktailMap.get("Bloody Mary") ?? 0,
-    },
-
-    // Bellini
-    {
-      quantity: "50ml",
-      ingredientId: ingredientMap.get("peach puree") ?? 0,
-      cocktailId: cocktailMap.get("Bellini") ?? 0,
-    },
-    {
-      quantity: "top up",
-      ingredientId: ingredientMap.get("champagne") ?? 0,
-      cocktailId: cocktailMap.get("Bellini") ?? 0,
-    },
-
-    // Daiquiri
-    {
-      quantity: "50ml",
-      ingredientId: ingredientMap.get("rum") ?? 0,
-      cocktailId: cocktailMap.get("Daiquiri") ?? 0,
-    },
-    {
-      quantity: "25ml",
-      ingredientId: ingredientMap.get("lime") ?? 0,
-      cocktailId: cocktailMap.get("Daiquiri") ?? 0,
-    },
-    {
-      quantity: "15ml",
-      ingredientId: ingredientMap.get("sugar") ?? 0,
-      cocktailId: cocktailMap.get("Daiquiri") ?? 0,
-    },
-
-    // Old Fashioned
-    {
-      quantity: "50ml",
-      ingredientId: ingredientMap.get("whiskey") ?? 0,
-      cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
-    },
-    {
-      quantity: "2 dashes",
-      ingredientId: ingredientMap.get("bitters") ?? 0,
-      cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
-    },
-    {
-      quantity: "1 twist",
-      ingredientId: ingredientMap.get("orange twist") ?? 0,
-      cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
     },
 
     // Martini
@@ -767,33 +744,55 @@ async function main() {
       cocktailId: cocktailMap.get("Tom Collins") ?? 0,
     },
 
-    // Piña Colada
+    // Moscow Mule
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("vodka") ?? 0,
+      cocktailId: cocktailMap.get("Moscow Mule") ?? 0,
+    },
+    {
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Moscow Mule") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("ginger beer") ?? 0,
+      cocktailId: cocktailMap.get("Moscow Mule") ?? 0,
+    },
+
+    // Sidecar
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("brandy") ?? 0,
+      cocktailId: cocktailMap.get("Sidecar") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("triple sec") ?? 0,
+      cocktailId: cocktailMap.get("Sidecar") ?? 0,
+    },
+    {
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lemon") ?? 0,
+      cocktailId: cocktailMap.get("Sidecar") ?? 0,
+    },
+
+    // Daiquiri
     {
       quantity: "50ml",
       ingredientId: ingredientMap.get("rum") ?? 0,
-      cocktailId: cocktailMap.get("Piña Colada") ?? 0,
+      cocktailId: cocktailMap.get("Daiquiri") ?? 0,
     },
     {
-      quantity: "100ml",
-      ingredientId: ingredientMap.get("pineapple juice") ?? 0,
-      cocktailId: cocktailMap.get("Piña Colada") ?? 0,
+      quantity: "25ml",
+      ingredientId: ingredientMap.get("lime") ?? 0,
+      cocktailId: cocktailMap.get("Daiquiri") ?? 0,
     },
     {
-      quantity: "50ml",
-      ingredientId: ingredientMap.get("coconut cream") ?? 0,
-      cocktailId: cocktailMap.get("Piña Colada") ?? 0,
-    },
-
-    // Mimosa
-    {
-      quantity: "50ml",
-      ingredientId: ingredientMap.get("orange juice") ?? 0,
-      cocktailId: cocktailMap.get("Mimosa") ?? 0,
-    },
-    {
-      quantity: "100ml",
-      ingredientId: ingredientMap.get("champagne") ?? 0,
-      cocktailId: cocktailMap.get("Mimosa") ?? 0,
+      quantity: "15ml",
+      ingredientId: ingredientMap.get("sugar") ?? 0,
+      cocktailId: cocktailMap.get("Daiquiri") ?? 0,
     },
 
     // Mai Tai
@@ -804,18 +803,59 @@ async function main() {
     },
     {
       quantity: "25ml",
+      ingredientId: ingredientMap.get("triple sec") ?? 0,
+      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
+    },
+    {
+      quantity: "25ml",
       ingredientId: ingredientMap.get("lime") ?? 0,
       cocktailId: cocktailMap.get("Mai Tai") ?? 0,
     },
     {
       quantity: "15ml",
-      ingredientId: ingredientMap.get("orange liqueur") ?? 0,
+      ingredientId: ingredientMap.get("syrup") ?? 0,
       cocktailId: cocktailMap.get("Mai Tai") ?? 0,
     },
+
+    // Old Fashioned
     {
-      quantity: "15ml",
-      ingredientId: ingredientMap.get("simple syrup") ?? 0,
-      cocktailId: cocktailMap.get("Mai Tai") ?? 0,
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("whiskey") ?? 0,
+      cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
+    },
+    {
+      quantity: "2 dashes",
+      ingredientId: ingredientMap.get("bitters") ?? 0,
+      cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
+    },
+    {
+      quantity: "1 twist",
+      ingredientId: ingredientMap.get("orange twist") ?? 0,
+      cocktailId: cocktailMap.get("Old Fashioned") ?? 0,
+    },
+
+    // Bellini
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("peach puree") ?? 0,
+      cocktailId: cocktailMap.get("Bellini") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("champagne") ?? 0,
+      cocktailId: cocktailMap.get("Bellini") ?? 0,
+    },
+
+    // Mimosa
+    {
+      quantity: "50ml",
+      ingredientId: ingredientMap.get("orange juice") ?? 0,
+      cocktailId: cocktailMap.get("Mimosa") ?? 0,
+    },
+    {
+      quantity: "top up",
+      ingredientId: ingredientMap.get("champagne") ?? 0,
+      cocktailId: cocktailMap.get("Mimosa") ?? 0,
     },
   ];
 
@@ -830,7 +870,11 @@ async function main() {
         where: { id: item.ingredientId },
       });
       if (!exists) {
-        invalidIds.push(item.cocktailId);
+        invalidIds.push({
+          q: item.quantity,
+          ii: item.ingredientId,
+          ci: item.cocktailId,
+        });
       }
     }
     return invalidIds;
