@@ -93,6 +93,7 @@ export default function Home() {
       </h1>
       <form className="mb-6 flex flex-col items-center">
         <input
+          id="ingredients"
           type="text"
           value={ingredients}
           onChange={handleInputChange}
